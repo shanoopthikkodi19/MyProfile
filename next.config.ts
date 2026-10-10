@@ -15,6 +15,14 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  output: 'export',        // generates static files in the "out" folder
+  images: {
+    unoptimized: true,     // the default image optimizer needs a server
+  },
+  // Only needed if your site lives at username.github.io/repo-name
+  basePath: '/MyProfile',
+  assetPrefix: '/MyProfile/',
+  trailingSlash: true,
 };
 
 export default nextConfig;
